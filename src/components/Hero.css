@@ -1,0 +1,177 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: none;
+}
+
+.landscape {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/Trees-Landscape-Silhouette.png');
+  background-size: 1000px 250px;
+  background-repeat: repeat-x;
+  background-position: center bottom;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.filter {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fe5757;
+  animation: colorChange 30s ease-in-out infinite;
+  animation-fill-mode: both;
+  mix-blend-mode: overlay;
+  z-index: 2;
+  pointer-events: none;
+}
+
+@keyframes colorChange {
+  0%, 100% { opacity: 0; }
+  50%       { opacity: 0.9; }
+}
+
+#canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+.resume-btn {
+  position: fixed;
+  top: 1.5rem;
+  right: 2rem;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.5rem 1.1rem;
+  border-radius: 2px;
+  transition: color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+}
+
+.resume-btn:hover {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.2);
+}
+
+.center-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.center-content > * {
+  pointer-events: auto;
+}
+
+.name {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(1.8rem, 5vw, 4rem);
+  font-weight: 200;
+  color: #ffffff;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 40px rgba(255, 255, 255, 0.4),
+    0 2px 20px rgba(87, 136, 254, 0.5);
+  margin: 0;
+  user-select: none;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 2px;
+  font-weight: 100;
+  animation: blink 1s step-end infinite;
+}
+
+.cursor--hidden {
+  animation: none;
+  opacity: 0;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.2rem;
+  list-style: none;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  transition: color 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.social-link svg {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.social-link:hover {
+  color: #ffffff;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
+}
+
+.social-link--location span {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+}
+
+@media (max-width: 480px) {
+  .resume-btn {
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .social-links {
+    gap: 1.4rem;
+  }
+
+  .social-link--location span {
+    display: none;
+  }
+}

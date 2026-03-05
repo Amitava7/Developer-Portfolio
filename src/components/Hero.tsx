@@ -45,7 +45,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <div className="hero">
+    <div id="hero" className="hero">
       <div className="landscape" aria-hidden="true" />
       <div className="filter" aria-hidden="true" />
 

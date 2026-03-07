@@ -1,3 +1,4 @@
+import AnimateIn from './AnimateIn'
 import './Projects.css'
 
 interface Project {
@@ -57,10 +58,13 @@ function ImagePlaceholder({ title }: { title: string }) {
 export default function Projects() {
   return (
     <section id="projects" className="projects">
-      <h2 className="projects-title">Projects</h2>
+      <AnimateIn>
+        <h2 className="projects-title">Projects</h2>
+      </AnimateIn>
       <div className="projects-grid">
-        {projects.map(project => (
-          <article className="project-card" key={project.title}>
+        {projects.map((project, i) => (
+          <AnimateIn delay={i * 0.12} className="project-card-wrapper" key={project.title}>
+            <article className="project-card">
             <div className="project-preview">
               {project.image
                 ? <img src={project.image} alt={project.title} className="project-img" draggable={false} />
@@ -91,7 +95,8 @@ export default function Projects() {
                 )}
               </div>
             </div>
-          </article>
+            </article>
+          </AnimateIn>
         ))}
       </div>
     </section>

@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+import AnimateIn from './AnimateIn'
 import './Skills.css'
 
 const skills = [
@@ -21,13 +23,22 @@ const skills = [
 export default function Skills() {
   return (
     <section id="skills" className="skills">
-      <h2 className="skills-title">Tech Stack</h2>
+      <AnimateIn>
+        <h2 className="skills-title">Tech Stack</h2>
+      </AnimateIn>
       <div className="skills-grid">
-        {skills.map(skill => (
-          <div className="skill-card" key={skill.name}>
+        {skills.map((skill, i) => (
+          <motion.div
+            className="skill-card"
+            key={skill.name}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.4, ease: 'easeOut', delay: i * 0.04 }}
+          >
             <img src={skill.icon} alt={skill.name} className="skill-icon" draggable={false} />
             <span className="skill-label">{skill.name}</span>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

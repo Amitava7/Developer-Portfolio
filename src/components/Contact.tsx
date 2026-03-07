@@ -1,4 +1,5 @@
 import { useState, FormEvent } from 'react'
+import AnimateIn from './AnimateIn'
 import './Contact.css'
 
 export default function Contact() {
@@ -29,11 +30,16 @@ export default function Contact() {
 
   return (
     <section id="contact" className="contact">
-      <h2 className="contact-title">Get in Touch</h2>
+      <AnimateIn>
+        <h2 className="contact-title">Get in Touch</h2>
+      </AnimateIn>
 
       {status === 'sent' ? (
-        <p className="contact-success">Message sent — I'll be in touch.</p>
+        <AnimateIn>
+          <p className="contact-success">Message sent — I'll be in touch.</p>
+        </AnimateIn>
       ) : (
+        <AnimateIn delay={0.1}>
         <form
           name="contact"
           method="POST"
@@ -83,6 +89,7 @@ export default function Contact() {
             </p>
           )}
         </form>
+        </AnimateIn>
       )}
     </section>
   )

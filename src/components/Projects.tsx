@@ -14,11 +14,19 @@ interface Project {
 const projects: Project[] = [
   {
     title: 'Social Media Feed',
-    description: 'A real-time social feed with infinite scroll, likes, comments, and user auth.',
+    description: 'A real-time social feed with infinite scroll, picture uploads, likes, comments, and user auth.',
     tags: ['Next.js', 'Cloudinary', 'MongoDb', 'Redis'],
     github: 'https://github.com/Amitava7/social-feed-nextjs',
     demo: 'https://pulsefeeddemo.netlify.app/login',
     image: '/project-previews/social-feed.png',
+  },
+  {
+    title: 'Gym Buddy',
+    description: "A mobile app to track your excersize progress.",
+    tags: ['React Native', 'Andriod', 'iOS', 'Typescript'],
+    github: 'https://github.com/Amitava7/GymBuddy',
+    demo: 'https://appetize.io/app/b_pkrdydr7cyqf5skjcth7lbz2re',
+    image: '/project-previews/gymbuddy.png',
   },
   {
     title: 'Telemetry Platform',

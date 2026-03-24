@@ -18,7 +18,7 @@ const projects: Project[] = [
     tags: ['Next.js', 'Cloudinary', 'MongoDb', 'Redis'],
     github: 'https://github.com/Amitava7/socialFeed-nextjs',
     demo: 'https://pulsefeeddemo.netlify.app/login',
-    image: '/project-previews/social-feed.png',
+    image: '/project-previews/socialFeed.png',
   },
   {
     title: 'Gym Buddy',
@@ -34,7 +34,7 @@ const projects: Project[] = [
     tags: ['ReactJs', 'NodeJS', 'Postgres', 'RabbitMQ'],
     github: 'https://github.com/Amitava7/LogStream',
     demo: undefined,
-    image: '/project-previews/logStream.jpg',
+    image: '/project-previews/logStream.png',
   },
 ]
 

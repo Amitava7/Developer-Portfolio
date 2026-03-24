@@ -17,6 +17,7 @@ const skills = [
   { name: 'GitHub Actions', icon: '/skill-icons/github-actions.svg' },
   { name: 'Jest', icon: '/skill-icons/jest.svg' },
   { name: 'Datadog', icon: '/skill-icons/datadog.svg' },
+  { name: 'RabbitMQ', icon: '/skill-icons/rabbitmq.svg' },
   { name: 'Always Learning', icon: '/skill-icons/comingSoon.svg' },
 ]
 

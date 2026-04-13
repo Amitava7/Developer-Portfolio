@@ -29,12 +29,12 @@ const projects: Project[] = [
     image: '/project-previews/gymBuddy.png',
   },
   {
-    title: 'LogStream',
-    description: 'Real-time log aggregation, alerting, and visualization platform built with RabbitMQ message queuing.',
-    tags: ['ReactJs', 'NodeJS', 'Postgres', 'RabbitMQ'],
-    github: 'https://github.com/Amitava7/LogStream',
-    demo: undefined,
-    image: '/project-previews/logStream.png',
+    title: 'DeutschDash',
+    description: 'A german learning app, with flashcards, crosswords, tense and case practices and much more.',
+    tags: ['NextJs', 'Mongo', 'Prisma'],
+    github: 'https://github.com/Amitava7/DeutschDash',
+    demo: 'https://deutschdash.netlify.app/login',
+    image: '/project-previews/deutschDash.png',
   },
 ]
 
